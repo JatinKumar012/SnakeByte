@@ -7,27 +7,35 @@
 body{
     height: 100vh;
     width: 100vw;
-    background-color: whitesmoke;
+    background-color:rgb(0, 0, 0);
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 .container{
-    height: 40rem;
-    width: 36rem;
-    background-color: white;
-    box-shadow: 0  0 10px 1px lightgray;
+    height: 90min;
+    width: 90min;
+    background: #f7f7f7;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column
 }
 
 .score-container {
-    height: 4rem;
-    width: 36rem;
-    background-color: grey;
+    height: 60px;
+    background: #333;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: larger;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
 
 .game-container {
@@ -35,13 +43,22 @@ body{
     width: 36rem;
     display: grid;
     grid-template: repeat(25,1fr)/ repeat(25, 1fr);
+    padding: 10px;
+    position: relative;
 }
 
 .food{
-    background-color: green;
+    background: linear-gradient(45deg, #1b9f6c);
     border-radius: 50%;
+    box-shadow: 0 0 10px #60efff;
 }
 
 .snake {
     background-color: red;
+    border-radius: 6px;
+    box-shadow: 0 0 5px #ff4b2b;
+    width: 100%;
+    height: 100%;
+    transition: all 0.15s ease;
+    
 }
