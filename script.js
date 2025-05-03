@@ -82,3 +82,21 @@ document.addEventListener("keydown",function(e){
         velocityX = 1;
     }
 })
+
+function gameOver() {
+    velocityX = 0;
+    velocityY = 0;
+    document.getElementById("finalScore").textContent = score;
+    document.getElementById("gameOverBox").classList.remove("hidden");
+}
+
+function restartGame() {
+    headX = 12;
+    headY = 12;
+    snakeBody = [];
+    score = 0;
+    generateFood();
+    document.getElementById("gameOverBox").classList.add("hidden");
+    scoreContainer.innerHTML = "Score: " + score;
+}
+

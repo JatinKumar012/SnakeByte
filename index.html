@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Byte</title>
-    <link rel="stylesheet" href="./style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Byte</title>
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-    <div class="container">
-        <div class="score-container">Press any (left right up down) key to start</div>
-        <div class="game-container">
-            <div class="food" style="grid-area: 2/5;"></div>
-        </div>
+  <main class="container">
+    
+    <div class="score-container">
+      Press any (← ↑ ↓ →) key to start
     </div>
-    <script src="./script.js"></script>
+    <div class="game-container">
+      <div class="food" style="grid-area: 2 / 5;"></div>
+    </div>
+
+    <div class="game-over-overlay hidden" id="gameOverBox">
+      <div class="game-over-card">
+        <h2>Game Over</h2>
+        <p>Your score: <span id="finalScore">0</span></p>
+        <button onclick="restartGame()">Play Again</button>
+      </div>
+    </div>
+    
+  </main>
+
+  <script src="./script.js"></script>
 </body>
 </html>
